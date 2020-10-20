@@ -1,0 +1,45 @@
+#top { display: none; }
+#menu { display: none; }
+.screen { display: none; }
+.banner { display: none; }
+#links { display: none; }
+#links img { display: none; }
+#menu3 img { display: none; }
+#menu3 a { display: none; }
+#print h1 {
+  font-size: medium;
+  font-family: sans-serif;
+}
+h1 { font-size: 14pt; }
+h2 { font-size: 13pt; }
+h3 { font-size: 12pt; }
+h4 { font-size: 11pt; }
+body { font-size: 10pt; }
+
+.headshot { float: right; }
+a { color: black; }
+
+#printheader h1 {
+  text-align: center;
+}
+
+h1,h2,h3,h4 { font-family: sans-serif; }
+body { font-family: serif; }
+.mark { display: none; }
+.mark3 { display: none; }
+
+#footer { 
+  font-size: 8pt; 
+  margin: 10pt 0pt 0pt 0pt;
+  }
+#footer p { 
+  margin: 0pt 0pt 0pt 0pt;
+}
+
+content, content3 {
+  margin: 0pt 0pt 0pt 0pt;
+  padding: 0pt 0pt 0pt 0pt;
+}
+
+.check { display: none; }
+.box { vertical-align: middle; }

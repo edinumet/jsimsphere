@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="ch03_files/main.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch03_files/third.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch03_files/print.css" media="print" type="text/css"><title>Dutton Institute - SimSphere Workbook</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head>
+
+<body>
+
+<div id="menu3">
+<a href="http://www.psu.edu/"><img class="mark3" src="ch03_files/mark3.gif" alt="Penn State Mark"></a>
+<a class="home" href="http://www.e-education.psu.edu/">Home</a>
+</div>
+
+<div id="content3">
+
+<a href="http://www.e-education.psu.edu/index.html">
+<img class="banner" src="ch03_files/banner2.gif" alt="John A. Dutton e-Education Institute"></a>
+
+<div id="printheader">
+<h1>John A. Dutton e-Education Institute</h1>
+</div>
+
+<!-- ################################################################################################# -->
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+<h1>SimSphere Workbook: Chapter 3</h1>
+
+<a name="introduction"></a>
+<h2>Introduction</h2>
+
+<p>
+So far, the simulations have been run with the same initial <em>soil water content</em>. We are about to explore what 
+happens when we change this very important parameter. First, however, let us start with some elementary definitions of 
+what we mean by soil water content. A familiar term, which is extensively used in the literature, particularly with 
+regard to climate simulations, is the '<em>soil moisture availability</em>'. We define this term in two seemingly 
+independent ways; (1) in the soil as the fraction of '<em>field capacity</em>', and assign it the symbol M. The subscript 
+s refers to a surface layer of some depth measured from the surface (<em>e.g.</em>, 10 cm), and the subscript o to a skin 
+surface layer. Others may define moisture availability differently, for example as the fraction of 'extractable' soil 
+water content, where some residual amount of soil water (e.g. 0.05 by volume) is considered to be un-extractable or as 
+the fraction of saturation. We also define this term with regard to the evaporation flux. We will return to the 
+difference between these two definitions and to a further discussion of the distinction between field capacity and 
+saturation.
+</p>
+<p>An alternate term used to represent soil moisture is the <em>volumetric soil water content</em>, w, which is the volume 
+of soil water content per unit volume of soil. Sometimes the volumetric water content is expressed as a water depth 
+(<em>e.g.</em>, 10 cm) but that depth only has meaning when the depth of the column is also understood, <em>e.g.</em>, 
+100 cm; Thus, for a unit surface area, the volumetric soil water content is equal to the equivalent depth of water, 
+<em>e.g.</em> ten centimeters of water in a column of 1 meter corresponds to a volumetric fraction of 0.10.  Think of 
+this as a cylindrical tube one-tenth filled with water. You may also see the term '<em>gravimetric soil water content</em>' 
+reported in the literature; this is the mass of water per unit mass of dry soil.  The volumetric and gravimetric 
+definitions are equivalent except that the latter is multiplied equal to the former multiplied by the soil density. 
+Various other measures of soil water content exist, such as the soil water tension, <em>soil matric potential</em> and 
+the <em>potential head</em>, all of which have the units of pressure (Pa or bars) or length. For further details on soil 
+water content units, we refer you to D. Hillel's excellent book, <strong>Introduction to Soil Physics</strong>, pp. 8-12. 
+</p>
+<p>Another parameter that is related to the soil water content is the <em>hydraulic pressure</em>, otherwise called the 
+<em>soil tension or water potential</em>. Hydraulic pressure is a difficult concept which is more relevant to a later part 
+of this course; for the present, simply regard this parameter, which is customarily assigned the symbol 
+ψ, as a 
+measure of the soil water content. 
+</p>
+<p>Let us first see how soil water content is used in the model. A related expression to w is the <em>atmospheric moisture 
+availability</em>,  M<sub>a</sub>. To explain what we mean by this term, we present <a href="#equations">Eqn. 3.1</a>, 
+which is simply a variation of the resistance law, as expressed in <a href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html#equations">Eqn. 2.2</a>, but 
+for latent heat flux. Here, the potential drop is the <em>specific humidity</em> (q), the vertical difference
+Δq across an atmospheric layer in the vertical governed by an atmospheric 
+resistance, which is the same as r<sub>H</sub>referred to in <a href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html#equationsl">Eqn. 2.2</a>. 
+(Instead of specific humidity, we could alternately use <em>mixing ratio</em> r or <em>water vapor pressure</em> carbon 
+dioxide concentration, depending on what flux we are talking about). 
+</p>
+<p>For a flux within the atmospheric surface layer, the <em>layer of 'constant flux'</em>, we can write the specific 
+humidity difference as that between the surface and the top of the surface layer (or any other pair of levels in that 
+surface layer), so long as the resistance in the formula pertains to that same vertical interval, <em>e.g.</em> the 
+resistance of the atmosphere to the vertical transport of sensible or latent heat from point a to point b would be 
+r<sub>a,b</sub>. Now, it's no trick to measure the specific humidity at the top of the surface layer, or indeed, at 
+any level above the ground surface. The problem, however, is to specify (let alone measure) the specific humidity at 
+the bottom of our imaginary vertical column, <em>i.e.</em> at the ground surface, which is hypothetically in the air 
+directly touching the surface. We could, of course, try to calculate the flux of water vapor by specifying specific 
+humidity q at two ends of an elevated vertical column, <em>i.e.</em> at two levels above the ground, but there are 
+computational problems in doing so, such as having to measure the humidity at the two levels. 
+</p>
+<p>Before, proceeding, let us define the atmospheric <em>surface layer</em>. Theoreticians like to define the surface 
+layer as a layer of constant flux, that is the vertical flux is the same at the bottom of the layer as at the top. Now, 
+this is obviously a contradiction in terms, as the warming or cooling of the atmosphere (or the drying or moistening 
+of it) is dependent on there being a difference in sensible heat flux vertically between the top and bottom of the 
+column. But if we take that column to be short enough the vertical difference in flux values will be small. What is 
+small? Normally in science one considers a quantity to be small if it is an order of magnitude (factor of 10) smaller 
+than the numbers to which that small value is being compared. Thus the surface layer is defined as the layer over which 
+the fluxes do not change in the vertical by more than 10%. Nominally, we take this surface layer to have a depth of 
+50 m, although in reality that depth will vary with time and likely be smaller at night than during the day. For 
+computational purposes we will henceforth take the surface layer depth as 50 m. 
+</p>
+<p>In considering moisture availability let us first tie the flux of moisture in the air just above the surface to the 
+amount of substrate water and the specific humidity at the ground surface which is at the level in the atmosphere most 
+closely tied to the soil water content. Second, to make the calculation of vapor flux we need to calculate or specify a 
+vertical difference in specific humidity in the surface layer. We could chose one level slightly above the surface and 
+one at the surface, but we would be faced with the problem that the bottom layer of the column is indeterminate in that 
+we are unsure exactly where the surface lies, and there is no equivalent surface specific humidity corresponding to the 
+surface radiant temperature, which can be more easily measured than specific humidity at the surface. If we choose to 
+measure the specific humidity at the bottom of the column but at a level just above the surface, we would still need to 
+relate the specific humidity at that level to a value at the soil surface. Alternately stated, we would have trouble 
+closing the system mathematically. 
+ </p>
+<p>Having chosen q<sub>a</sub> , the specific humidity at the top of the surface layer, we are still faced with the 
+problem of determining an imaginary value of q<sub>0</sub> (specific humidity at the earth's surface) for the 'bottom' 
+of the layer (<a href="#equations">Eqn. 3.2</a>). To do this, we resort to an artifact, which is as follows:  Let 
+us define a <em>'saturation' specific humidity</em> q<sub>S</sub> at the surface temperature (T<sub>0</sub>); the 
+fractional <em>relative humidity</em> at the surface h<sub>0</sub> is thus approximately<sup>1</sup> equal to
+<img src="ch03_files/relhum.gif" style="vertical-align: middle;" alt="">
+allowing us to rewrite <a href="#equations">Eqn. 3.2</a> as <a href="#equations">Eqn. 3.3</a>. This type of 
+formulation, although used by some modelers, still leaves us with a highly variable and difficult to prescribe unknown 
+parameter, that of h<sub>0</sub>, which is still dependent on q<sub>0</sub>. 
+</p>
+<p>We must admit that the problem of linking q<sub>0</sub> or h<sub>0</sub> to the substrate water content has not yet 
+been rigorously solved, although some expedients for circumventing the whole issue exist. No matter, let us proceed 
+by defining a 'potential evaporation' L<sub>E</sub>E<sub>not</sub>. There are various ways to define this quantity. 
+Ours is, simply, the evaporation occurring over a saturated surface of temperature T<sub>0</sub>, using 
+<a href="#equations">Eqn. 3.2</a>, for 100% relative humidity at the surface h<sub>0</sub> = 1.0. This is 
+<a href="#equations">Eqn. 3.4</a>. (Other definitions of potential evaporation are possible). We now define the 
+quantity, M<sub>a</sub>, the '<em>atmospheric moisture availability</em>', which is simply the ratio of actual 
+evaporation to potential evaporation. Thus we can write <a href="#equations">Eqn. 3.1</a> as
+<a href="#equations">Eqn. 3.5</a>. 
+</p>
+<p>Intuitively, M<sub>a</sub> should be related to soil water content. The leap of faith which we require in order to 
+proceed is to set M<sub>a</sub>  equal to M<sub>0</sub>  , where M<sub>0</sub>  is the soil water content as a fraction 
+of field capacity in the soil surface layer. Because there is very little else one can do, this equivalence between 
+M<sub>a</sub> and M<sub>0</sub> has been adopted by many modelers, although some attempt to demonstrate erudition by 
+using a power law rather than a simple ratio for soil water content. There is some justification for such an assumption 
+based on field measurements, but the exact form of the relationship between M<sub>a</sub> and M<sub>0</sub> undoubtedly 
+varies with soil type, amongst other things. Nevertheless, the evaporation will vary from zero for M<sub>a</sub> = 0 
+(perfectly dry soil) to potential evaporation for perfectly wet soil. All that can be said for these two somewhat 
+related variables is that both vary between 0 and 1.0, probably in some non-linear fashion with each other. When the 
+soil is absolutely dry both variables will have the value of zero. When at field capacity, both M<sub>a</sub> and 
+M<sub>0</sub> will equal 1.0. Simply equating one to the other, as we do in the model, may not be exactly correct, but 
+the differences can never be great, as both are constrained to vary in more or less the same way in between the same 
+limits. So let us proclaim the equivalence to be close enough for modeling work. 
+</p>
+<p><a href="#equations">Eqn. 3.5</a> ties evaporation closely to soil water content. By setting M<sub>a</sub> = 0 
+(totally dry soil) the evaporation is completely suppressed. For M<sub>a</sub> not equal to zero, however, a decrease 
+in M<sub>a</sub>, while certainly causing a decrease in evaporation, also corresponds to an increase in sensible heat 
+flux and, therefore, according to <a href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html#equations">Eqn. 2.1</a>, to a rise in surface temperature. However, 
+a rise in surface temperature corresponds to an increase in the saturation specific humidity at the surface 
+q<sub>S</sub>(T<sub>0</sub>) and so to an increase in the vertical gradient in q and therefore in potential evaporation. 
+Thus, a compensation (negative feedback) exists which attempts to brake the decrease in evaporation caused by the 
+decrease in soil water content. The result is that a 10% decrease in M<sub>a</sub> may correspond <em>in some 
+instances</em> to far less than a 10% decrease in evaporation and in other instances to a greater than 10% decrease. 
+Clearly, since a 100% change in M<sub>a</sub> causes a 100% change in evaporation, there must be ranges of M<sub>a</sub> 
+in which evaporation changes less rapidly with changing M<sub>a</sub>, and ranges where evaporation changes more rapidly 
+than an equivalent change in M<sub>a</sub>; n'est-ce pas ?
+</p>
+<p>Before proceeding to the simulations, we should more precisely define field capacity and soil saturation. Here is an 
+experiment for you. Take a flower pot, fill it with water until it starts to drip (but be careful here). When the 
+dripping ceases we can say that the water content in the soil is in equilibrium with gravity and is at field capacity. 
+If we were to add water beyond field capacity until all the pores between the soil grains were filled with water the 
+soil would then be at saturation. At this point the soil would really look like mud. A measure of saturation for a 
+given soil sample is its <em>porosity</em> which is the percent of the soil occupied  by spaces between grains. A rule of 
+thumb is that field capacity tends to be about 0.75 of saturation, although both field capacity and saturation vary with 
+soil type to the extent that the ratio between them is not really a constant three-quarters. Typically, a soil may have 
+a saturation value of about 0.44 by volume and a field capacity of 0.33 by volume. 
+</p>
+<p>Field capacity and other soil parameters are set in the model by the choice of soil type. We will not be concerned 
+with soil properties except for vegetated surfaces, as the bare soil evaporation does not make use of soil properties 
+explicitly. This seemingly oversight on our part was done as a convenience. 
+</p>
+<p>Most models of surface energy fluxes use field capacity rather than saturation to define moisture availability. 
+There are two reasons for this choice. One is that saturation in natural soils is fleeting after a rainstorm. Very 
+quickly the excess water beyond field capacity diffuses downward, or runs off or flows directly to deeper layers 
+via cracks in the substrate, thereby reducing the soil water content to field capacity. The main reason, however, 
+is that the fluxes from saturated soil are virtually identical to that over soil at field capacity, and therefore 
+there is virtually no sensitivity of the surface fluxes to soil water content above field capacity. In some models the 
+value of zero soil moisture availability is taken at a low value, loosely identified with the so-called 
+'<em>wilting point</em>'. We do not adopt this as the lower limit (preferring instead that zero be the lower limit for 
+soil water content) because we believe that evaporation can continue even when the soil is below wilting point. Wilting 
+is really defined only for plants in any case.
+</p>
+<a name="simulations"> </a><h2>Simulations</h2>
+
+<strong>Level 1</strong>
+<p>In this scenario we give you carte blanch to fiddle with the surface moisture availability as you so desire, however 
+you might like to ponder the following in making your simulations. Note that we do not expect you to do everything 
+suggested; simply take a facet and explore it as you develop your understanding of the concept of moisture availability! 
+</p>
+
+<a name="L1S1"></a>
+<p><em>Simulation series 1</em></p>
+
+<ul>
+<li><strong>Vary Surface Moisture Availability</strong>
+<p>In these series of simulations we would like to see how the fluxes and surface air and surface radiant temperatures 
+fluctuate when soil water content is changed. We are interested in the relative differences between the individual 
+simulations. Two values of moisture availability, one for the soil surface (M<sub>o</sub>) and one for the 
+<em>root zone</em> (M<sub>r</sub>), are required to make a simulation. Until now both have been set, the former at a value 
+of 0.5 (half of field capacity) and the latter at 0.75. 
+</p>
+<p style="text-align: center;">
+After making a run with the standard parameters used in <a href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">chapter 1</a>, reduce 
+M<sub>o</sub> to 0.1, and then increase it to 0.9.
+</p>
+<p>Look at the changes in sensible and latent heat fluxes, as well as the surface temperature and surface moisture 
+availability itself. 
+</p>
+<p>Explore the sensitivity of evaporation and of surface temperature To to changes in M<sub>o</sub>. (We define 
+'<em>sensitivity</em>' of evaporation to changes in M<sub>o</sub> as <img src="ch03_files/evapsens.gif" style="vertical-align: middle;" alt="">.)
+</p>
+<p><strong>Questions:</strong></p>
+
+<ol>
+<li>Based on these two simulations, in what part of that range of Mo is the sensitivity of evaporation and of surface 
+temperature to soil moisture the greatest? Where are those sensitivities the smallest? Are those sensitivities constant 
+throughout the day? </li>
+<li>How does the <em>Bowen Ratio</em> change with changing M<sub>o</sub> ? (Recall that the Bowen Ratio is the ratio of 
+sensible to latent heat flux at the surface.) </li>
+<li>How does M<sub>o</sub> itself vary throughout the day and why should it vary in time? </li>
+<li>How does <em>ground flux</em> v(the flux from the surface up or down through the layer of soil just below the surface) 
+vary with changing M<sub>o</sub>? It should be evident to you by now that the moisture availability profoundly affects the 
+Bowen Ratio and the individual fluxes. </li>
+</ol>
+
+</li>
+</ul>
+
+
+
+
+
+
+<a name="L1S2"></a>
+<p><em>Simulation series 2</em></p>
+
+
+
+<ul>
+<li><strong>Change the windspeed and moisture availability</strong>
+<p>Let's see how surface fluxes are affected by a changing M<sub>o</sub> at different wind speeds. In other words, we want 
+to see how the sensitivities of the fluxes are determined in the above simulation change with wind speed? In so doing, 
+lets examine the variation of soil water content itself with time during the day.
+</p>
+
+
+<p style="text-align: center;">
+Vary the windspeed just as you did in <a href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html#L1S1">Simulation 1 of Chapter 2</a>, but 
+perform the simulations with M<sub>o</sub> = 0.1.  Repeat these simulations using a M<sub>o</sub> = 0.9.  To keep things 
+straight, it may help to make a table or chart listing the varying parameters of these runs and the features seen in the 
+output.
+</p>
+
+<p><strong>Questions:</strong></p>
+
+<ol>
+<li>You may also have noted from the previous scenario that windspeed affects the Bowen ratio. What we would like to 
+investigate is whether that change in Bowen ratio due to changing windspeed is likely to be in the same sense for all 
+values of M<sub>o</sub>. Alternately stated, does a change in surface energy fluxes brought about by an change in 
+windspeed equally affect sensible and latent heat fluxes at all values of M<sub>o</sub>? </li>
+<li>We know that decreasing the wind speed causes the atmospheric resistance to go up and the fluxes to go down. (You can 
+see this effect in reverse by blowing on wet skin or on hot skin caused by a burn.) Does this occur in the atmosphere? 
+Obviously, were the soil absolutely dry, the change in surface latent heat flux due to a change in wind speed would be 
+zero, whereas this would not be the case were the soil wet.  The goal here is to assess at which range of soil water 
+content will wind speed play the largest role in determining fluxes.</li>
+<li>What happens with the surface moisture availability versus time during the day?</li>
+</ol>
+
+</li>
+</ul>
+
+
+
+
+
+
+<a name="L1S3"></a>
+<p><em>Simulation series 3</em></p>
+
+<ul>
+<li><strong>Change the root zone moisture availability</strong>
+<p>Root zone moisture availability will be very important when plants are introduced but it will also have a small effect 
+in the case of bare soil. 
+</p>
+<p style="text-align: center;">Change the root zone moisture availability M<sub>r</sub> to 0.1 and then increase this parameter to 0.9.
+</p>
+<p>Questions:</p>
+
+
+<ol>
+<li>Is there any effect on the fluxes or temperatures? (Recall that we are dealing only with bare soil; there is no 
+vegetation.) </li>
+<li>What happens to M<sub>o</sub> during the day? Why does it decrease when the root zone soil water content is low? Would 
+it decrease if the two moisture availability values (root zone and surface) were set equal initially? </li>
+<li>Why does the surface soil water content decrease some times even when the root zone soil water content is high? What 
+happens to M<sub>o</sub> at night? Can you explain why the latter tends to increase at night especially when the root zone 
+soil water content is high?</li>
+</ol>
+
+
+
+<p>The above are all questions you should be able to answer without much knowledge of soil physics. The key here is that 
+two factors affect the soil water content in our simple two-layer soil scheme, evaporation and diffusion of soil water 
+vertically within the substrate. Water is lost from the surface layer during evaporation (but not directly from the root 
+zone soil water content) but it can also flow down the gradient of soil water content, even at night, within the soil. 
+Later we will see that transpiration, the evaporation from leaves, is taken by the roots from water in the root zone 
+layer. 
+</p>
+<p>Finally, a suggestion. Don't perform more simulations than you are able to comprehend at this moment. If the results 
+seem bewildering, stop and think about them. Don't worry about covering all bases.
+</p>
+</li>
+</ul>
+
+
+
+<a name="L2"></a>
+<p><strong>Level 2</strong></p>
+<p>As shown in these simulations, soil water content is a very crucial parameter in simulating surface energy fluxes and 
+temperatures.  However, it is very difficult to obtain an accurate estimation of soil moisture either physically or 
+empirically to insert into a model.  On the other hand, it is relatively easy to specify parameters such as season, 
+latitude, slope, azimuth, and wind speed in these models, as they can be measured accurately.  
+</p>
+<p>Qualitatively, compare the effects of varying soil water content with those of varying latitude, slope, azimuth, 
+windspeed, and time of the year on surface fluxes and temperatures.  
+</p>
+<p>Look back at the results from previous simulations in Chapters <a href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> and 
+<a href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a>.  Try ranking these variables in order from most important to least important in 
+determining the surface energy balance.  Note that the ranking may vary depending on the range you specify. For example, 
+time of year may not matter between May and September, but it could be crucial between September and December.
+</p>
+<p>This should provide you with a good understanding of how the factors we have looked at so far may affect future 
+simulations, <em>all other things being equal</em>.  It is important to understand the uncertainty of various inputs into 
+a model along with their potential influence on the output.  In this case, soil water content is a relatively uncertain 
+parameter, yet its potential to influence the simulation is very high.  
+</p>
+
+<p>Design an experiment that illustrates why it is best to water the lawn at dusk or on 
+a cloudy day rather than in the morning.  Do this by first making four simulations: 
+By 'best' we mean a more efficient use of water and by efficient we mean that more water 
+gets in the root zone as opposed to being evaporated at the surface. Here are some suggestions:
+</p>
+
+<ul>
+<li>Perform a simulation with standard conditions with the surface moisture availability at field capacity (M<sub>o</sub>
+ = 1,0) and the root zone moisture availability at a low value, say 0.1, representative of a heavily watered surface with 
+a very thirsty root zone layer. This will simulate the watering case. Start at the standard early morning time and run 
+until 5 AM the following day. </li>
+<li>Perform the simulation with a low value of soil water content at the surface (M<sub>o</sub>= 0.1) also starting at 
+the early morning time. This simulates the non-watering case. </li>
+<li>Run a third simulation with a cloudy sky (cloud parameter equal to 0.7) for the watered case. </li>
+<li>Finally, start the simulation at 5 PM and let it run until 5 AM the next morning for the watered case.</li>
+</ul>
+
+
+
+
+<p>Questions:</p>
+<ol>
+<li>In the three simulations, can you assess qualitatively how much of the surface water reaches the root zone and how 
+much is "lost" to evaporation by the end of the day.</li>
+<li>What is the difference in the root zone moisture availability and surface moisture availability at 3 AM in the three 
+cases? </li>
+<li>If the day were cloudy would it matter so much if the lawn were watered in the morning?</li>
+<li>What is the difference in water efficiency (root zone storage versus water lost to evaporation) after 12 hours of 
+simulation for the case when the lawn is watered in the morning versus when it is watered in the evening?</li>
+</ol>
+
+<a name="glossary"> </a>
+<h2>Glossary</h2>
+
+<p><strong>List of terms to look up</strong></p>
+
+<p>
+gravimetric soil water content<br>
+mixing ratio<br>
+potential evaporation<br>
+saturation vapor pressure<br>
+sensitivity curve<br>
+soil porosity<br>
+soil water potential; hydraulic potential; soil tension<br>
+soil water saturation<br>
+transpiration<br>
+vapor pressure<br>
+volumetric soil water content<br>
+wilting point<br>
+</p>
+
+<a name="references"> </a><h2>References</h2>
+
+<ul>
+<li>Hillel, D., 1982, Introduction to Soil Physics, pp. 8 - 12.</li>
+<li>Wetzel, P. and J.-T. Chang, 1987, Concerning the relationship between evapotranspiration and soil moisture, <strong>J. Climate and Appl. Meteor.</strong>, 26, pp 24 - 25.</li>
+<li>Sellers P. J., Y. Mintz, Y. C. Sud and A. Dalcher, 1986, A simple
+biosphere model (SiB) for use within general circulation models, <strong>J. Atmos. Sci.</strong>, 43, pp 520-521.</li>
+<li>Dickinson, R., 1984, Modeling evapotranspiration for three- dimensional global climate models, <strong>Climate Processes and Climate Sensitivity</strong>, Geophysical Monograph 29, Maurice Ewing Volume 5, pp 60-62.</li>
+<li>Mahfouf, J.- F. and B. Jacquemin, 1989, A study of rainfall
+interception using a land surface parameterization for mesoscale
+meteorological models, <strong>J. Appl. Meteor.</strong>, 28, p.1284.</li>
+</ul>
+
+<a name="equations"> </a>
+<h2>Equations</h2>
+
+[Eqn 3.1]
+<ul style="list-style-type: none;">
+<li><img src="ch03_files/ch03-eq1.gif" alt="Equation 3.1"></li>
+</ul>
+[Eqn 3.2]
+<ul style="list-style-type: none;">
+<li><img src="ch03_files/ch03-eq2.gif" alt="Equation 3.2"></li>
+</ul>
+[Eqn 3.3]
+<ul style="list-style-type: none;">
+<li><img src="ch03_files/ch03-eq3.gif" alt="Equation 3.3"></li>
+</ul>
+[Eqn 3.4]
+<ul style="list-style-type: none;">
+<li><img src="ch03_files/ch03-eq4.gif" alt="Equation 3.4"></li>
+</ul>
+[Eqn 3.5]
+<ul style="list-style-type: none;">
+<li><img src="ch03_files/ch03-eq5.gif" alt="Equation 3.5"></li>
+</ul>
+
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+
+
+<!-- ################################################################################################# -->
+
+<div id="footer">
+<p><a href="http://www.e-education.psu.edu/">John A. Dutton e-Education Institute</a>,
+A unit of the <a href="http://www.ems.psu.edu/">College of Earth and Mineral Sciences</a></p>
+<p><a href="http://www.psu.edu/">The Pennsylvania State University</a> © 2003</p>
+<p>Updated 5 August 2003</p>
+</div>
+
+
+</div> 
+
+</body></html>

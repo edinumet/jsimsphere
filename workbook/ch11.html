@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="ch11_files/main.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch11_files/third.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch11_files/print.css" media="print" type="text/css"><title>Dutton Institute - SimSphere Workbook</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head>
+
+<body>
+
+<div id="menu3">
+<a href="http://www.psu.edu/"><img class="mark3" src="ch11_files/mark3.gif" alt="Penn State Mark"></a>
+<a class="home" href="http://www.e-education.psu.edu/">Home</a>
+</div>
+
+<div id="content3">
+
+<a href="http://www.e-education.psu.edu/index.html">
+<img class="banner" src="ch11_files/banner2.gif" alt="John A. Dutton e-Education Institute"></a>
+
+<div id="printheader">
+<h1>John A. Dutton e-Education Institute</h1>
+</div>
+
+<!-- ################################################################################################# -->
+
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+
+<h1>SimSphere Workbook: Chapter 11</h1>
+
+<a name="introduction"></a> 
+<h2>Introduction</h2>
+
+
+<p>Next to incident flux of <em>photosynthetically active (solar)
+radiation (PAR)</em>, soil water content is the most important
+variable affecting stomatal resistance. Measurements show 
+that as the soil dries out the stomatal resistance tends to 
+increase, slowly at first and then much more rapidly.  
+However, this is about as far as agreement goes in the great
+'root-shoot' controversy. Until a few years ago, most texts
+on stomatal resistance, such as the one by Jones (1983), 
+discussed stomatal resistance in terms of the leaf water 
+status, as represented by the leaf (mesophyll) water 
+potential. The force of this outpouring of research carried
+over into meteorology in those few atmospheric models
+whose surface parameterization make explicit reference
+to plants, such as the BATS and SiB models. (These models, 
+which attempt to describe actual physical processes 
+occurring within plants, are <em>mechanistic</em>, as opposed to
+those which are satisfied only with bulk formulae in 
+which the various coefficients may be determined by curve 
+fitting data. Naturally, there are degrees of mechanistic
+modeling; one person's mechanism is another's empiricism.) 
+</p>
+<p>Anyway, something happened in plant research 
+around 1985. Some plant scientists found that they
+could experimentally induce stomatal changes by 
+altering the soil water content only, keeping the 
+leaf water potential constant, or by treating the 
+roots with the plant hormone ABA. It is difficult to
+assess the upheaval in thinking that occurred over 
+15 years ago, because the adherents of the root-control
+school have been so aggressive and vocal that a large 
+minority, if not a majority, of the scientific 
+community has been silenced. To speak contrary to the 
+new viewpoint, <em>i.e.</em>, to advocate shoot control, is
+almost equivalent to supporting a politically incorrect
+point of view, such as that the place of women is
+only in the kitchen! Like the advocates of this latter
+and, we might add, regressive social idea, there 
+are still a large number of individuals who secretly 
+harbor the reactionary viewpoint of shoot control, 
+hoping that it will someday make its return. Alternately
+stated, there are still those of us who continue to
+believe that leaves—specifically leaf water status—exert a profound influence on stomatal resistance.
+In addition, some scientists have looked at flux 
+measurements made in the field, and find in these 
+measurements strong evidence of a shoot mechanism at 
+work. (We refer to the associated phenomenon, to be 
+discussed below, as the <em>transpiration plateau</em>.) 
+</p>
+<p>In this scenario we will investigate the
+behavior of stomatal resistance with changing 
+soil water content, but we will use a parameterization
+that involves linking stomatal resistance directly 
+to leaf water potential. It's not that we want to
+discredit soil water content, but to show how it 
+is possible to calculate stomatal resistance as a 
+function of both soil water content and leaf water
+status (leaf water potential). You should keep an
+open mind as you ponder this scenario. 
+</p>
+
+<a name="rootzone"></a>
+<h2>Root zone water content and stomatal resistance</h2>
+
+
+<p>Messages to inhibit stomatal opening are sent from the
+roots to the leaves in response to the perception of water 
+stress in the root zone. These regulators, which have the
+general name of <em>cytokinins</em>, such as ABA (<em>abscisic acid</em>),
+are synthesized in the roots and carried through the xylem 
+to the stomates. The response time for this communication 
+to take place is a few minutes to perhaps hours for a very
+large plant. 
+</p>  
+<p>Virtually all the existing models that relate stomatal 
+resistance directly to soil water content employ some 
+function of either soil water content or soil water potential.
+The functional form of these equations allows stomatal 
+resistance to increase as the soil water content is diminished.
+At first there is a very small change in stomatal resistance
+with decreasing soil water content below field capacity. 
+Then, at low soil water content the rate of increase of 
+stomatal resistance with decreasing soil water content 
+becomes very large. This behavior is shown in Figure 11.1,
+which is taken from Turner (1991; his figure 4). Note that 
+there is almost no variation in stomatal conductance between 
+about 40 and 100 % extractable water in the soil. 
+Apparently, stomatal resistance is very weakly related to
+soil water content until the latter reaches some value 
+well below saturation. This type of threshold behavior in 
+plants occurs in other contexts, for example in relation 
+to the solar flux (PAR) and to soil hydraulic resistance 
+as a function of soil water content
+</p>  
+
+<p style="text-align: center;"><img src="ch11_files/11.gif" alt="figure 11.1"></p>
+
+<p>Let us agree to refer to <em>plant water stress</em> as 
+occurring when the stomatal resistance is increased 
+(from some reference state) due to a reduction in water 
+content in the soil or leaf. (Stress on the plant may 
+arise from other factors, such as exposure to ozone, as
+discussed in Chapter 13.) An increase in stomatal resistance
+that causes an effective shutdown in transpiration defines 
+the so-called soil wilting point. As we have begun to see, 
+however, internal interaction within the system of different 
+factors can mask the effect of a change in just one component.
+Conversely, the effect of soil water content on stomatal 
+resistance can be indirect, the result of changes in other
+factors, such as vapor pressure deficit or solar intensity. 
+</p>  
+<p>If we let you, you could exercise the formulations that 
+links directly root zone water content and stomatal 
+resistance via the 'Deardorff' equation, which is an option
+in the model. For the present, however, let us move on to 
+the leaf water potential response because we believe it to 
+be more elegant than the Deardorff equation
+</p>  
+
+<a name="leafwater"></a> <h2>Leaf Water Potential and Stomatal Resistance</h2>
+
+<p>Let us return again to Figure 10.2, which shows a schematic 
+change in leaf water potential during a week of drying. Although 
+the difference between leaf and soil water potentials appear 
+almost constant for the first few days, the leaf water potential
+appears to crumple against an unseen barrier at about -15 bar.
+Now look at Figure 11.2, taken from Nizinski and Saugier (1989;
+their figure 2). They show that the measured leaf water potential
+of the forest (heavy solid dots) are approximately constant 
+along a value of about 0.2 s mm-1 (200 s m-1) until the leaf water
+potential reaches a threshold of about  -15 bar, below which the 
+stomatal resistance increases rapidly with a further decrease in 
+leaf water potential. This is what we examined in the previous 
+chapter.  Ultimately, at a leaf water potential of about -25 bar,
+the leaf water potential has exceeded the constant value of the 
+cuticular resistance (small solid dots).
+</p>  
+<p style="text-align: center;"><img src="ch11_files/11_004.gif" alt="figure 11.2"></p>
+
+<a name="Transpiration"></a>
+
+<p><strong>The transpiration plateau and the leaf water potential threshold</strong></p>
+
+<p>Measurements showing some sort of leaf water potential 
+threshold frequent the literature<a href="#one"><sup>1</sup></a>.  Consider a typical example 
+of this which is presented by Turner (1991; his figure 6). 
+Many of Turner's earlier papers present dramatic evidence of 
+the threshold leaf water potential, yet Turner became a firm 
+advocate of soil water control (a root partisan). The presence
+of a water potential threshold is markedly visible in Turner's 
+data, which we show in Figure 11.3. Note that there is very 
+little change in stomatal conductance above a leaf water potential 
+of about minus 10 to minus 12 bar, below which there is a 
+catastrophic downward plunge in stomatal conductance with 
+decreasing leaf water potential. (Recall that stomatal conductance
+is simply the inverse of stomatal resistance.) Of course, this
+could be the result of an indirect relationship in which the 
+roots signal the leaves to shut down. Turner presents both sides 
+of the root-shoot issue in his paper but flatly declares that leaf
+water potential is not the controlling factor in leaf hydration. 
+Some of this problem may be semantics. An underlying factor may be
+controlling both the leaf water potential and stomatal 
+resistance. Turner suggests that the mechanism is related to
+abscisic acid, which comes from the roots. However, he leaves
+the door open for the possibility of transient leaf control 
+by implying that there might be two sources of stomatal response.
+One signal is in the roots and it is carried to the leaves in
+response to slow changes in soil water content. Another is in
+the leaves, which are also known to produce some abscisic acid; 
+this allows for fluctuations in the mesophyll water potential 
+(Figure 11.3). 
+</p>  
+<p style="text-align: center;"><img src="ch11_files/11_002.gif" alt="figure 11.3"></p>
+
+<p>Perhaps a more cogent statement in favor of leaf control
+was made by two plant physiologists (Davies and Mansfield, 
+1987), whom we quote in the appendix. Note that they say that
+a water deficit affects the balance of regulators in the 
+leaves. Even if leaf water potential is not in itself the 
+mechanism for changing stomatal resistance, both it and the 
+stomatal resistance are regulated in tandem by another 
+mechanism, <em>e.g</em>. the leaf abscisic acid. In that case our 
+viewpoint is less than completely mechanistic, but it is still
+circumstantially correct to make stomatal resistance dependent 
+on leaf water potential, since modeling the concentration of 
+abscissic acid lies well outside the scope of our expertise
+or interests. You may draw your own conclusions. 
+</p>  
+
+<a name="one"></a>
+<p>
+1. We have some similar measurements made at Rock 
+Springs (Penn State) in a soybean crop. The threshold 
+value of leaf water potential for this crop was also 
+about -15 bar. More recent measurements by the 
+distinguished plant experimentalist at USDA, James Bunce, 
+brings new evidence to bear showing that the leaf indeed 
+has a voice in controlling stomatal resistance.
+</p>
+
+
+<a name="leafturgor"></a>
+<h2>Leaf turgor and wilting</h2>
+
+<p>According to Jones (1983), the onset of wilting, and so 
+the threshold water potential, is associated with a vanishing 
+of the difference in water potential between the inside and
+outside of the mesophyll cells. This difference, which is
+generally positive, is called the <em>turgor pressure</em>. (This 
+term was introduced in the previous chapter.) You can think 
+of turgor pressure of a balloon as that which is keeping it
+inflated; so also for the cell. For a given cell solute,
+turgor pressure decreases as the total water potential 
+decreases, resulting in the cell becoming less and less turgid
+with a decrease in its water content. A shrinking of the
+mesophyll cells accompanies the loss of turgor, so that 
+wilting (the reduction of turgor pressure to zero) manifests
+itself as a withering of the plant. Indeed, this shrinkage
+is actually reflected by a slight shrinking of  the stem 
+width as the plant dries out! </p>
+
+<p>A complete loss of turgor corresponds to a situation of 
+distress in the plant. Although some plant scientists discount
+the vanishing of turgor pressure as a mechanism for inducing
+the increase of stomatal resistance, it is likely that the 
+leaf water potential threshold occurs somewhere near that 
+point. For many plants zero turgor is reached when the water
+potential in the cells is close to -15 bar. Some scientists 
+have suggested that, since the stem also shrinks with decreasing 
+water content, a measure of stem diameter changes might 
+constitute a measure of soil water content. Although many
+plants exhibit a stress threshold at values considerably 
+less than (more negative than) or greater than (less negative)
+-15 bar, the latter figure has been adopted as the official
+wilting point. Choice of -15 bar is also due to the fact that
+many soils exhibit a very rapid decrease in soil water
+potential with decreasing soil water content near -15 bar.
+That is the reason why the choice of soil type (and threshold
+water potential for the plant) is so important in this model. 
+We can see that this value of -15 bar constitutes almost a 
+magic number!
+ </p> 
+<p>Loss of turgor and incipient wilting need not be permanent 
+or even associated with a low soil water content. We see 
+examples in which the fluxes exhibit a transient response 
+to drying soil, suggesting that control of stomatal resistance
+also exists in the leaf or is manifested via the leaf. 
+Consider Figure 11.4, which shows two evapotranspiration 
+curves made over corn, one curve superposed on the other. 
+The curves pertain to two adjacent fields, one irrigated 
+and wet the other dry; (we are not sure how wet or how dry 
+was the soil in each field, but you can certainly tell 
+which is which). Note that the two curves are virtually 
+identical in the morning and again later in the late
+afternoon; in between the one set of fluxes shows a 
+distinct flattening. We refer to this flattening as the
+<em>transpiration plateau</em>. 
+</p>
+
+<p style="text-align: center;"><img src="ch11_files/11_003.gif" alt="figure 11.4"></p>
+
+
+<a name="Transpiration"></a>
+<p><strong>Modeling the transpiration plateau</strong></p>
+<p>
+How does this plateau come about and why is it
+transient? Recalling the previous scenario, we note 
+that the leaf water potential decreases to a minimum
+during midday (in accord with the typical rise and 
+fall of transpiration during the day). The leaf water
+potential may reach a threshold (<em>e.g.</em> -15 bar),
+below which the plant sounds the alarm to close its
+stomates. We refer to this threshold as the <em>critical
+leaf water potential</em>. Below the threshold, the 
+stomatal resistance increases rapidly with a further 
+decrease in leaf water potential. That increase in 
+stomatal resistance will tend to retard transpiration 
+and limit further decrease in leaf water potential. 
+</p>
+<p>We formulate stomatal resistance as a function of 
+leaf water potential. This is done as follows: The 
+stomatal resistance function (<a href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html#equations">Eqn. 7.2</a>) is expressed 
+in terms of a component (f(ψ<sub>e</sub>)), where ψ<sub>e</sub> is an 
+epidermal leaf water potential, which will be described
+shortly. When the leaf water potential lies above the 
+imposed threshold leaf water potential, stomatal 
+resistance depends weakly on leaf water potential (in
+the case of our corn plants, that sensitivity to leaf
+water potential is taken to be zero<a href="#two"><sup>2</sup></a>). Below the 
+threshold, leaf water potential stomatal resistance 
+increases very rapidly with decreasing leaf water
+content. We represent each regime<a href="#three"><sup>3</sup></a>, below and above 
+threshold by straight lines. The pair of straight lines
+defining the sub-threshold and super-threshold regimes
+intersects at the point forming a sort of ramp 
+function. The point of intersection defines the
+threshold leaf water potential. In Figure 11.2: the
+two straight lines, one horizontal and one sloping 
+upward to the right, intersect to define the threshold 
+water potential at -16 bar.  
+</p>
+<p>Because of the scatter of data it is really 
+difficult to determine if stomatal resistance is 
+at all sensitive to leaf water potential in the 
+sub-threshold regime. Since the data is so limited, 
+we arbitrarily chose the slope of the line to be zero
+in the sub-threshold regime, as in Figure 11.2 (no
+sensitivity of stomatal resistance to leaf water 
+potential; you can change these slopes in the model 
+in specifying a new vegetation type, but, if you do, 
+BEWARE). Beyond the threshold, the slope of the line
+is very steep. The most important number in this 
+equation is, however, the value of the threshold leaf 
+water potential. 
+</p>
+<a name="leaf"></a>
+<p>
+<strong>Leaf water potential and vapor pressure deficit</strong>
+</p>
+
+<p>
+Most plant scientists will concede that <em>if</em> a 
+leaf potential tripwire exists, (the alarm mechanism
+that signals the arrival of the threshold and zero 
+turgor), it lies not in the mesophyll, but in the 
+epidermis, specifically in the guard cells. Accordingly, 
+we relate the stomatal resistance to the epidermal 
+leaf water potential ψ<sub>e</sub> . Now, the mesophyll water 
+potential ψ<sub>m</sub> 
+governs the transpiration in <a href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html#equations">Eqn. 10.3</a>,
+but the epidermal water potential is the appropriate
+potential used in the stomatal resistance equation, 
+<a href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html#equations">Eqn. 7.2</a>. Epidermal leaf water potential is similar 
+in magnitude to that in the mesophyll, although it 
+will always be equal to or lower than the mesophyll
+potential. We take the difference between the mesophyll
+and epidermal leaf water potential to be proportional
+to the vapor pressure deficit. The constant of 
+proportionality between mesophyll water potential and 
+epidermal water potential is called beta, the parameter
+you varied in the last scenario. (Don't worry too 
+much about this refinement; it's a brand new approach 
+to relating stomatal resistance to vapor pressure 
+deficit; some plant scientists actually like the 
+idea!) The two potentials can behave somewhat 
+independently; the epidermal leaf water potential could 
+decrease to the threshold, while the mesophyll leaf water
+potential increases, in accordance with a decrease in 
+transpiration. (See if this helps you answer the question
+from Chapter 10 regarding ψ<sub>e</sub>
+and ψ<sub>m</sub>).
+</p>
+<p>The more conventional way to parameterize the vapor
+pressure deficit effect is simply to increase the 
+stomatal resistance by some function of the vapor pressure
+deficit. This is the basis for the so-called 'Jarvis'
+formulation, which is basically the form of the stomatal 
+resistance equation used in our model, except, of course, 
+for the VPD effect. Although the two methods for augmenting 
+the stomatal resistance as a function of vapor pressure 
+deficit are fundamentally different they tend to produce 
+a similar effect when viewed overall. The problem with the
+vapor pressure deficit effect is that it tends to mask the 
+water potential threshold effect by accomplishing the same 
+thing: an increase in stomatal resistance during the middle 
+part of the day, although somewhat skewed toward later afternoon. 
+</p>
+
+<a name="potential"></a>
+<p>
+<strong>Leaf water potential and transpiration</strong>
+</p>
+
+<p>
+As formulated, the stomatal resistance should not vary
+with leaf water potential or with soil water content until
+the epidermal leaf water potential reaches the threshold 
+value. Imposing a threshold leaf water potential in the 
+model leads to a midday increase in stomatal resistance when
+the transpiration becomes sufficiently large to require the
+leaf water potential to fall to the threshold. (A large 
+vapor pressure deficit may also cause the leaf water potential
+to reach threshold much sooner, according to our formulation.)
+When this happens, the transpiration starts to be arrested 
+but, at the same time, the rise in sensible heat flux from
+the leaf and the concomitant rise in leaf temperature work 
+to augment the transpiration flux (by increasing the vapor
+pressure deficit). The result of this tug of war is that
+the transpiration neither falls nor rises, but forms a
+plateau. The lower the soil water content, the more quickly
+in the morning the leaf water potential reaches the plateau
+and the longer the plateau lasts. Look at your results from
+Chapter 9;  this is also the feedback mechanism we were
+discussing.
+</p>
+<p>Note that the leaf water potential may not reach the
+threshold value if the soil is sufficiently wet, because 
+it starts out from a relatively small negative value. In that 
+case no soil water effect will be observed in the simulations.
+The same thing may happen if the sky is cloudy and the 
+atmospheric demand for transpiration is weak, because then the
+leaf water potential will not fall very far in the absence of 
+strong transpiration demand. Alternately, the leaf water 
+potential may reach the threshold after starting out at a 
+relatively small negative value because the demand for 
+transpiration is large, the vapor pressure deficit large or 
+for other reasons, <em>e.g.</em>, because the denominator of <a href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html#equations">Eqn. 
+10.2</a> is large for some reason; (<em>e.g.</em> Z<sub>p</sub> is large).
+</p>
+<p>You may have found in your previous simulations that
+stomatal resistance and transpiration do not vary greatly
+as a function of soil moisture content over a range of 
+soil moisture values, although  xylem resistance and 
+other factors (such as ambient relative humidity) influence
+the behavior of stomatal resistance. When the water 
+potential threshold is reached, however, large fluctuations
+in stomatal resistance occur. The earlier the onset of 
+the plateau the lower the transpiration during the plateau
+and the higher the midday stomatal resistance. As 
+suggested by <a href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">Figure 10.2</a>, the stomatal resistance and the 
+transpiration may not change very much from one day to the
+next during soil drying until the threshold is reached.
+After that, however, and until a general collapse of the
+plant occurs (permanent wilting), the changes are 
+primarily during the period of the plateau. 
+</p>
+
+
+<a name="final"></a>
+<p>
+<strong>A final word on the root-shoot controversy</strong>
+</p>
+
+<p>As in many such controversies the solution lies somewhere
+between the extremes. In all probability, both root and 
+shoot influence the stomatal resistance. According to a 
+French scientist named Tardieu, the real mechanism goes 
+something like this: As the soil dries out cytokinins 
+(ABA) are sent to the leaves. When the leaf begins to 
+perceive a water loss stomatal resistance is increased 
+and more ABA is produced, including in the leaves 
+themselves. The effect of this hormone is to accentuate 
+the response of the leaf to stress. The root secretions
+augment the effect of the threshold, although without 
+affecting the stomatal resistance very much before the 
+threshold is reached. As the root continues to dry out 
+the change in stomatal resistance with decreasing leaf
+water potential is enhanced, resulting in a more rapid
+increase in stomatal resistance with decreasing leaf 
+water potential. Tardieu's solution incorporates elements
+of both arguments but preserves the threshold effect.</p>
+
+
+
+<a name="values"></a>
+<p>
+<strong>Values of threshold leaf water potential</strong>
+</p>
+
+<p>Values of threshold leaf water potentials vary with
+species, age and previous stress episodes experienced
+by the plant<a href="#four"><sup>4</sup></a>. Many plants exhibit a threshold close 
+to -15 bar (that magic number again ! ), although values 
+vary between -9 and -22 bar depending on the species of
+plant. We set the threshold at -15 bar in our 'corn' 
+simulations. </p>
+
+
+<a name="two"></a>
+<p>
+2. That the sensitivity is weak in corn when the leaf
+water potential has not yet reached the threshold is
+evidenced by the fact that field measurements tend 
+to show no significant differences in fluxes from one
+day to the next before the threshold is reached but
+a considerable difference after the leaf water potential
+threshold is reached. An example of this effect is 
+shown in Figure 11.4. 
+Note that the two fluxes are essentially 
+identical except during the period of the transpiration 
+plateau for the dry field. This is a form of transient
+water stress.
+</p>
+
+<a name="three"></a>
+<p>3. The simplest possible function to represent an 
+exponential consistent with a minimum of data is a 
+pair of straight lines which intersect at the point 
+where the exponential increase becomes large. This 
+type of equation is sometimes called a 'linear 
+discontinuous model'. </p>
+
+<a name="four"></a>
+<p>4. Evidence suggests that the threshold leaf water 
+potential may decrease (become more negative) with 
+repeated episodes of soil drying and water stress 
+on the plant. This is a form of adaptation. </p>
+
+
+<a name="interaction"> </a><h2>Interaction between various parameters and threshold leaf water potential</h2>
+
+<p>1) Soil water content
+Stomatal resistance does not vary with soil water content
+until the threshold leaf water potential is reached. As 
+the soil dries out (Figure 10.2), the soil water potential 
+diminishes, requiring the leaf water potential to fall to 
+lower and lower values each day in order to sustain the
+transpiration. After a while, the soil water potential has
+decreased sufficiently to allow the leaf water potential to 
+reach the threshold, at least for a short time during the 
+day; hence the plateau. Soils that dry out rapidly, such as 
+sand, will experience a rapid decrease in soil water potential
+and therefore cause the vegetation to reach water stress more
+quickly. (What do you suppose would occur if you planted a 
+vegetable such as potatoes with a threshold leaf water 
+potential of -10 bar in sandy soil, which has a field capacity
+of about 10% by volume ?) 
+</p>
+<p>2) Xylem resistance
+Making the xylem resistance larger requires the leaf 
+water potential to fall to lower values in order to 
+maintain the same transpiration. Thus, the leaf water 
+potential is more easily reached under moist soil conditions 
+when the xylem resistance is large. 
+</p>
+<p>3) Vapor pressure deficit
+The drier the atmospheric conditions, the greater the
+vapor pressure deficit, the larger (initially) the
+transpiration and so, the lower the leaf water potential;
+the lower the leaf potential the more likely that it 
+will reach threshold. Since the tripwire in our model 
+resides in the epidermal leaf water potential, the 
+larger the value of beta the more likely the leaf will 
+reach this potential threshold. (Could this response
+be a self-protective behavior against drought ? ) 
+</p>
+<p>4) Solar intensity
+Weak sunshine will require small transpiration and
+so, is not likely to cause the leaf water potential
+to reach threshold unless the soil is very dry. High 
+solar intensity will tend to force a larger 
+transpiration and so, cause a lower leaf water 
+potential to be reached, all other things being equal. 
+</p>
+
+
+<a name="simulations"> </a><h2>Simulations</h2>
+<a name="L1"></a>
+<p><strong>Level 1</strong></p>
+
+<p>Here, we will allow you to make up your own mind on 
+the 'root-shoot' controversy by performing a number of 
+sensitivity simulations.  Keep an open mind and try and
+determine as many mechanistic relationships as you can
+from the output.
+</p>
+<p><em>Simulation # 1</em></p>
+<p><strong>Vary the soil water content</strong></p>
+
+<p>Run the standard summertime corn case, then lower 
+the soil water content enough so that the plateau 
+appears in the transpiration. Note the variation in 
+leaf water potential and stomatal resistance during the 
+period of the plateau, as well as the leaf temperature.
+Plot soil water content versus stomatal resistance (at 
+midday) for three or four values of soil water content 
+and see if your graph resembles Figure 11.1. (Be careful, 
+if you lower the soil water content too far you may burn
+up the plant and cause the model to behave badly.) </p>
+
+<a name="L1S2"></a>
+<p><em>Simulation # 2</em></p>
+<strong>Vary the xylem resistance, Z<sub>p</sub></strong>
+
+<p>Induce the plateau by varying the xylem resistance,
+Z<sub>p</sub>. What change in Z<sub>p</sub> will bring on the plateau earlier,
+an increase or a decrease?  Plot Z<sub>p</sub> versus stomatal
+resistance at midday for three or four different values
+of Z<sub>p</sub>.  How sensitive is the leaf water potential, 
+transpiration, and stomatal resistance to this factor? 
+What happens when you lower the xylem resistance?</p>
+
+<p>It is interesting to note that the effect of ozone 
+deposition on plants, ozone being a toxic gas for tissue, 
+is to cause Z<sub>p</sub> to increase; (see Chapter 13). Given this 
+fact and your results here, consider what effects atmospheric
+concentration of this toxic gas has on plant growth. </p>
+
+<a name="L1S3"></a>
+<p><em>Simulation # 3</em></p>
+<p><strong>Vary the beta parameter</strong></p>
+
+<p>Increase beta, (as in a previous scenario) and 
+pretend that the corn is somehow sensitive to changes
+in vapor pressure deficit. Report on the behavior of
+the transpiration plateau and the daily variation of 
+stomatal resistance. Also, look closely at the changes 
+in leaf and epidermal water potentials as beta is 
+varied.  Which of these potentials appears to be the 
+'controller' of stomatal resistance based on these 
+simulations? </p>
+
+<p style="text-align: center;"><strong>Questions</strong></p>
+
+<ol>
+<li>Suppose that the continuation of water stress
+would cause the critical leaf water potential to 
+decrease. What effect would this change have on transpiration.</li>
+<li>If the xylem resistance (Z<sub>p</sub>) increases
+with plant age what effect would this have on transpiration?</li>
+<li>Why do you suppose that the leaf water potential
+does not decrease very far beyond the critical water
+potential threshold in any of these simulations?</li>
+<li>Why do you suppose the transpiration is 
+almost identical in these simulation prior to and 
+after the transpiration plateau?</li>
+</ol>
+
+<p>It should be obvious that there is no clear winner
+to the 'root-shoot' debate, and that there are many 
+interactions and influential variables when it comes 
+to stomatal closure and transpiration.  The fact that 
+soil water content was not varied in simulations 2 and
+3 should tell you that root control is not the sole 
+answer, and that stomates respond to what the leaf status
+is as well.  Just peer out of the closest window and
+you will see a multitude of variations of plant types
+and sizes.  Thus far, we have considered a full, dense 
+plant canopy with maximum solar radiation.  Do you
+think a plant growing on its own, without the aid of 
+a buffered canopy, might respond differently to the
+stresses examined in these simulations?</p>
+
+<p>Try setting up a sparse corn canopy (lower 
+the fractional vegetation cover and/or the LAI), 
+submitting it to the changes in VPD, xylem resistance,
+and soil water content just performed.  Does it 
+appear that plants who are 'loners' have extra 
+sensitivity to certain changes than those nestled 
+in a large canopy do?  Compare to your results from
+simulations 1-3 to see which type of plants are 
+better off under certain conditions.  Might you have
+any recommendations for the future evolution of 
+plants who are out on their own to enable them to 
+survive longer?</p>
+
+<p>Slowly decrease soil water content in a series of steps 
+from field capacity to something like 0.3 of field capacity,
+or at least until the stomatal resistance begins to 
+rise markedly. Plot soil water content versus mid day 
+stomatal resistance. Imagine yourself fitting some
+polynomial function to the curve you just obtained.
+Argue whether this function would be easier to use 
+in a land surface model to calculate stomatal resistance
+as a function of soil water content than having to 
+formulate the entire plant hydaulics as in our model. </p>
+
+<a name="references"></a>
+<h2>References</h2>
+
+<ul>
+<li>Nizinski, J. and Saugier, 1989, A model of transpiration 
+and soil-water balance for a mature oak forest, <strong>Ag. and
+Forest Meteor.</strong>,47,1-17.</li>
+<li>Turner, N. C., 1991, Measurement and influence of 
+environmental and plant factors on stomatal conductance
+in the field, <strong>Ag. and Forest Meteor.</strong>,54,137-154. </li>
+<li>Davies, W. J. and T. A. Mansfield, 1987, Auxins 
+and stomata, <strong>Stomatal Function</strong>, Zeiger, Farquhar 
+and Cowan, Eds., Stanford University Press, 503 pp.</li>
+</ul>
+
+<a name="terms"></a>
+<h2>Terms to look up</h2>
+
+<p>
+transpiration plateau
+<br>cytokinins
+<br>plant water stress
+<br>turgor pressure
+</p>
+
+<a name="equations"></a>
+<h2>Equations</h2>
+
+
+[Eqn 11.1]
+<ul style="list-style-type: none;"> <li>PAR = photosynthetically active (solar) radiation </li></ul>
+
+[Eqn 11.2]
+<ul style="list-style-type: none;"> <li>ABA = abscisic acid </li></ul>
+
+[Eqn 11.3]
+<ul style="list-style-type: none;"> <li>Z<sub>p</sub> = xylem resistance </li></ul>
+
+
+
+<a name="appendix"></a>
+<h2>Appendix</h2>
+
+<p>We have appreciated for some time how wide a range of 
+environmental factors can elicit a response from a single 
+pair of cells, but to date much research on plant water 
+deficits has concentrated upon characterization of the effects
+of a deficit-induced increase in a single inhibitor of stomatal
+opening, namely, ABA. It now seems likely that water deficit 
+may also reduce the concentration in the leaves of promoters of 
+stomatal opening, and thus it is more realistic to expect that
+the balance of regulators in the leaves will help to determine
+the degree of stomatal opening. Stomatal behavior in different
+species under varying environmental conditions must be interpreted
+in terms of variation in one or more components of an interactive 
+system linking external and endogenous factors. Changes in the 
+levels of single components may or may not elicit a response, and 
+the interactive system operates so that a change in a single 
+component may be promotive or inhibitive, depending on the prevailing
+conditions. </p>
+
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+
+
+<!-- ################################################################################################# -->
+
+<div id="footer">
+<p><a href="http://www.e-education.psu.edu/">John A. Dutton e-Education Institute</a>,
+A unit of the <a href="http://www.ems.psu.edu/">College of Earth and Mineral Sciences</a></p>
+<p><a href="http://www.psu.edu/">The Pennsylvania State University</a> © 2003</p>
+<p>Updated 5 August 2003</p>
+</div>
+
+
+</div> 
+
+</body></html>

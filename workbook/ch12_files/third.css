@@ -1,0 +1,35 @@
+body {
+  background-image: url(backgrounds/background3.gif);
+  background-repeat: repeat;
+}
+
+a { color: black; }
+p,h1,h2,h3,h4 { color: black; }
+a:hover { 
+  /* color: white; background-color: #660066; */
+}
+
+#links {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 3px 0px;
+}
+
+#menu {
+}
+
+#menu a { 
+  color: white; 
+}
+
+#menu h3 {
+  color: white;
+}
+
+#footer p {
+  color: #000000;
+}
+
+td { 
+  vertical-align: top;
+  padding: 5px;
+}
