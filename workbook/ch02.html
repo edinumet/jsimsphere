@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<<<<<<< HEAD
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="ch02_files/main.css" media="screen" type="text/css">
@@ -487,4 +488,494 @@ A unit of the <a href="http://www.ems.psu.edu/">College of Earth and Mineral Sci
 
 </div>
 
+=======
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="ch02_files/main.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch02_files/third.css" media="screen" type="text/css">
+<link rel="stylesheet" href="ch02_files/print.css" media="print" type="text/css"><title>Dutton Institute - SimSphere Workbook</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head>
+
+<body>
+
+<div id="menu3">
+<a href="http://www.psu.edu/"><img class="mark3" src="ch02_files/mark3.gif" alt="Penn State Mark"></a>
+<a class="home" href="http://www.e-education.psu.edu/">Home</a>
+</div>
+
+<div id="content3">
+
+<a href="http://www.e-education.psu.edu/index.html">
+<img class="banner" src="ch02_files/banner2.gif" alt="John A. Dutton e-Education Institute"></a>
+
+<div id="printheader">
+<h1>John A. Dutton e-Education Institute</h1>
+</div>
+
+<!-- ################################################################################################# -->
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+
+<h1>SimSphere Workbook: Chapter 2</h1>
+<a name="introduction"></a> <h2>Introduction</h2>
+
+<p>
+A well-known radical, anti-war organization during the 1960's was known as the "Weathermen," so called
+because, it claimed to know which way the wind as blowing; (it evidently didn't know which way the wind
+was blowing enough to have the foresight to call themselves Weatherpersons.) In this session we will
+endeavor to become more astute Weatherpersons (whether you like it or not!) by finding out what parameters
+affect the wind speed and how wind speed influences the surface energy fluxes and the surface temperature.
+Obviously, the initialized wind speeds themselves govern the wind speeds, although the latter can evolve
+during the simulation. The purpose of this chapter, therefore, is to explore the effects of wind speed
+on surface radiant and air temperatures and the surface energy fluxes.
+</p>
+
+<a name="background"></a> <h2>Background</h2>
+
+<p>
+First, ask yourself the following questions: Would you expect the
+sensible heat flux (and, for that matter, the latent heat flux) to
+increase or decrease with
+increasing wind speed? How about the surface temperature? To answer
+this question, first consider the concept of atmospheric resistance.
+Away from hard
+surfaces (where molecular processes dominate the flux of heat across
+the air interface directly in contact with that surface), the
+atmospheric resistance is related to
+the efficiency of turbulent eddies to carry away the heat and water
+vapor; refer to <a href="#equations">Eqn. 2.2 and 2.3</a>.
+Would you expect the turbulence to increase or decrease
+with increasing wind speed? Would this suggest an increase or decrease
+in the atmospheric resistance and so, in the sensible heat flux with
+increasing wind
+speed? How about latent heat flux? However, wouldn't an increase in
+wind speed also change the vertical temperature profile and decrease
+the vertical
+temperature differences between any pair of levels
+(ΔT),
+thereby tending to lower the sensible heat flux? If ΔT decreases would
+this occur with a decrease in
+both the surface temperature and an increase in the temperature at some
+level above the surface or would just one or the other levels change
+temperature.
+</p>
+<p>Answers to these questions may not be obvious or even determinable
+without performing simulations. The basic question we will pose in the
+scenario is:
+would you expect the surface temperatures to increase or decrease in
+response to change in wind speed?
+</p>
+<p>Now you see the problem. You can possibly perceive the answers to
+these questions, but mathematically (using the resistance formula given
+by <a href="#equations">Eqn. 2.2</a>)
+you are unable to prove your conclusions without further analysis. Now
+consider the further dilemma: the energy for the sensible heat and for
+evaporation
+must come ultimately from the net radiation. If we somehow increase the
+sensible heat flux by manipulation of the wind speed (or some other
+parameter),
+wouldn't we also likely change the latent heat flux in the same sense?
+If so, where does that extra energy come from, or are both fluxes
+somehow constrained
+by a mutual competition for the same available radiant energy (<a href="#equations">Eqn. 2.1</a>)? (Later chapters will ask how the availability of substrate water influences these
+parameters.)
+</p>
+<a name="procedure"></a> <h2>Procedure</h2>
+
+
+<p>
+Let's make some simulations and observe the behavior of the surface
+energy fluxes, the surface temperature and the Bowen ratio. (Before
+going on you
+might wish to consult Oke's book on Boundary Layer Climates, Second
+Edition, pp 32-42 and Monteith's book Principles of Environmental
+Physics, Second
+Edition.) In the simulations that follow, you will be examining the
+role of the wind speed in modifying the surface fluxes of heat and
+water vapor as well as the
+surface and near-surface air temperatures.
+</p>
+<p>As you make the following simulations, you will notice that the
+surface sensible heat flux and the surface temperature are related.
+This is not surprising in
+view of <a href="#equations">Eqn. 2.2</a> and its allied resistance
+laws. We find, however, that the surface sensible heat flux maximizes
+within an hour or so of midday, but the surface
+temperature maximizes in the mid-afternoon, as is consistent with our
+own observations and the diurnal temperature lag described in Chapter
+1. What about the
+vertical temperature gradient when the wind speed increases or
+decreases? Would the effect of changing the wind speed change the
+resistance and the vertical
+temperature (or moisture) gradients so as to partially counteract the
+other's effect on the fluxes? After all, <a href="#equations">Eqn. 2.2</a>
+tells us that the sensible heat flux depends not
+on the temperature but on the vertical temperature gradient (as
+expressed by the difference between the surface temperature and that at
+the top of the surface
+layer). This is an aspect we will explore further in Scenario 5.
+</p>
+
+<a name="surface"></a>
+<h2>Surface Wind speed, Temperature, Specific Humidity and other Constituents in the Atmsopheric Surface Layer</h2>
+
+<p>First, what do we mean by a 'surface layer'? Specialists in the atmospheric
+boundary layer may define the surface layer as the depth above the surface
+over which the vertical variations in the fluxes of heat, moisture and
+momentum do not vary by more than about 10%. Somewhat erroneously, this
+layer is called the layer of 'constant flux' . This term is not meant
+to imply that the fluxes do not change with height, but that they change
+in a small way-small being defined as less than 10% of the value at the
+surface. The need to define a surface layer is not as arbitrary and whimsical
+as it may seem. Whether we are talking about the atmospheric surface layer
+the airflow over my desk or the flow of blood within the walls of an artery,
+the variation of fluid speed versus distance in the surface layer has
+a characteristic logarithmic variation, such that the greatest variation
+with distance occurring at the surface interface. Viewed graphically,
+this type of wind profile would show a decay of speed toward the surface.
+Such a logarithmic relationship results in a straight line when the speed
+is plotted versus the log of the distance from the surface. Figure 2.1
+shows a series of data points for two such wind speed plots, one over
+a rough surface and one over a smooth surface. </p>
+<p> Typically, the depth of the surface layer is about 50 m during the day and
+perhaps somewhat less at night. Accordingly, in our model we will take
+the surface layer to be 50 m in depth. Temperature, specific humidity,
+momentum, carbon dioxide and ozone conform to logarithmic profile over
+which the fluxes themselves remain constant. Because a logarithmic quantity
+can not have zero value, the wind speed variation shown in Figure 2.1
+has a non-zero value of height at zero wind speed. The height at which
+the wind speed vanishes is called the roughness height, which is assigned
+the symbol z<sub>o</sub>. The smaller the slope of the straight line the
+larger the roughness length and the greater the associated turbulence.
+Indeed, the slope of the straight line is inversely proportional to a
+parameter known as the friction velocity, which is a direct measure of
+the turbulence. </p>
+
+<p style="text-align: center;"><img src="ch02_files/2.gif" alt="figure 2.1"></p>
+
+<p>
+Roughness heights need to be assigned in the model. A
+general rule of thumb, which holds well for uniform vegetated
+surfaces is that the roughness height is about one-tenth the
+average height of the roughness elements. This rule is more
+problematic for irregularly distributed roughness elements such
+as in a city. If buildings are typically about three stories high
+(10 m), a reasonable roughness height might be taken as 1 m.
+The concept is not very clear when talking about isolated roughness
+elements such as trees in a field. A single tree (or two trees)
+10 m high sitting isolated in a field generally will not influence
+the roughness height for air flowing over that field. In that
+case a suitable roughness height might be that appropriate to the
+shorter vegetation in the field, say 0.1 m. As one adds trees to
+this picture, the roughness height will gradually become
+dominated by the trees, so that a forest of trees 10 m high might
+have a roughness of 1 m. Beyond a certain density, when
+turbulent eddies in the atmosphere can no longer penetrate to the
+surface between the trees, the roughness may decrease as the
+tree canopy becomes denser. In this case the wind profile over
+a dense canopy of trees may respond as if the actual surface were
+near tree top level and the roughness height would be
+appropriate to a smooth layer formed by an ensemble of tree
+crowns. Thus, care must be made in assigning a roughness
+height in a particular problem.
+</p>
+<p>
+Other variables than wind speed, such as temperature
+(which is associated with sensible heat flux), specific
+humidity (which is associated with latent heat flux), carbon
+dioxide and ozone also obey logarithmic profile laws, such
+that the change in these variables with height increases
+in an exponential manner as one approaches the surface. A
+rule is that when a surface interface acts as a source for
+the flux the associated variable is a maximum at the surface.
+When the surface acts as a sink for the flux the associated
+variable is a minimum at the surface. Thus, in the case of
+temperature, the surface constitutes a source of sensible
+heat flux during the day and exhibits a temperature maximum;
+a temperature minimum occurs at night under conditions of
+downward sensible heat flux. Momentum flux always has a sink
+at the surface where the wind speed (at the roughness height)
+is always zero.
+</p>
+<p>
+The mathematical surface - that level which the logarithmic
+functions perceive as the surface -- need not be identical
+to the physical surface which you and I perceive as the ground.
+The height of the mathematical surface may lie some distance
+above the ground surface. This level is referred to as the
+<em>displacement plane</em>. In the case of a dense tree canopy, the
+wind speed may behave as if the tops of the trees constituted
+a smooth surface. The actual ground surface beneath the trees
+might be meters below the mathematically defined displacement
+height. In our model, all heights are taken with respect to
+the displacement plane. Although the user must decide what is
+the actual height of the displacement plane above the
+physical surface, we need not specify the displacement
+height. All heights in the model are defined with respect
+to the displacement height. Typically, the displacement height
+is about two-thirds of the average height of the obstacles
+except when the obstacles are irregularly spaced, fairly close
+together or quite far apart. For example, in the case of
+the dense tree canopy, the displacement plane might be close
+to tree top level rather than at two-thirds the height of
+the trees.
+</p>
+
+<a name="simulations"></a> <h2>Simulations</h2>
+
+<span style="text-align: center;"><a href="#Level1">Level 1 </a> | <a href="#L1S1">Simulation 1</a> | <a href="#L1S2">Simulation 2</a> |
+<a href="#Level2">Level 2</a></span>
+
+
+<a name="Level1"></a>
+<strong>Level 1</strong>
+
+<a name="L1S1"></a>
+<p><em>Simulation 1:</em></p>
+
+<ul>
+<li><strong>Change wind speeds at all levels</strong>
+
+<p>Let us first consider the role of the wind speed itself. After
+running the default case, make another run after decreasing the wind
+speeds by, say, half
+<strong>at all levels</strong> in the wind speed profile. Watch and
+explain what happens to the fluxes and the air temperatures in
+comparison to the default case. Check
+the behavior of the ground fluxes and the maximum temperature. Is this
+behavior consistent with the flux and resistance laws of <a href="#equations">Eqn. 2.2 and 2.3</a>?
+Why does the
+net radiation decrease slightly as a result of slowing down the wind
+speed? (For the answer to this, look at the radiant surface temperature
+and ask yourself what
+effect that parameter has in the net radiant flux at the surface.)
+</p>
+<p>Look closely at the sensible heat flux, and you should see small
+fluctuations in this parameter and in the wind speed at 50 m during the
+evening, which die
+down when the wind speeds are reduced. Note that the evaporation
+vanishes at night no matter what the wind speed.
+</p>
+</li>
+
+<li><strong>Geostrophic wind and the balance of forces</strong>
+
+<p>The geostrophic wind speed is simply a measure of the pressure gradient and
+therefore the pressure gradient force. Since we specify the surface geostrophic
+wind we are effectively specifying the surface pressure gradient. Normally on
+the large scale and away from the surface, where friction is very important, the
+pressure gradient force is closely balanced by the Coriolis force, which is
+proportional to the wind speed. So when the wind speed is large, the pressure gradient
+force (geostrophic wind speed) must be large in order to balance it. If balance
+does not occur, however, there is a net force and a net force requires an
+acceleration or deceleration of the wind speed.
+</p>
+<p>
+In the model, we assume that, initially, the Coriolis and pressure gradient forces
+are balanced (geostrophic balance) at all levels above 550 m from the surface.
+This assumption is not made at the surface. Instead, we specify the surface pressure
+gradient force to be constant from 550 m above the surface to the surface. Whereas
+the two forces are assumed to be initially in balance at 550 m and above, they are
+not necessarily equal below this level. Why do we not let the two be equal all the
+way to the ground? The reason is friction, which causes the winds to decrease
+with decreasing altitude below about 0.5 – 1.0 km above the ground. (In fact,
+friction indirectly extends its effect through mixing to greater heights.) Since
+the wind speed decreases fairly rapidly with height near the surface, the pressure
+gradient force will likely exceed the Coriolis force below 550 m. If a force balance
+were to be maintained that additional force would be the frictional force.
+</p>
+<p>
+Agreed that this is a bit of an artifice. We make this assumption only to start the
+model in a reasonable manner. What actually happens once the model begins to execute
+is that an effective force imbalance is transmitted up through the mixing layer via
+the effects of turbulent mixing associated with the sensible heat flux. This turbulent
+mixing, manifested by sensible heat fluxes, can vary in time. The imbalance between
+Coriolis and pressure gradient forces, which were initially equal above 550m, is created
+by a kind of virtual friction produced by the turbulent mixing in which faster and slower
+moving air mix. This mixing is manifested by faster moving air moving to levels with
+slower moving winds and visa versa. This mixing creates a virtual friction force, which
+may tend to balance, which is to say that the three forces, Coriolis, pressure gradient
+and friction may be closely in balance. But close is not exact, and the effect of mixing
+is inevitably to create a resultant acceleration or deceleration. These accelerations
+are can be large at times, causing the wind to vary rapidly with time. If the imbalance
+between the forces is excessive, large oscillations in the wind field can develop as
+the result of the component accelerations of the wind. In reality, such oscillations may
+be associated with the development of the nocturnal, low-level (1000-1500 m) jet. However,
+if you impose something unreasonable on the wind field, the simulation may
+decide to self destruct. It is the model's way of saying 'Ouch p-p-please give me something reasonable!')
+</p>
+</li>
+</ul>
+
+
+<a name="L1S2"></a>
+<p><em>Simulation 2:</em></p>
+
+<ul>
+<li><strong>Night time winds</strong>
+<p>Re-run the default simulation, reducing the wind speeds again by a
+factor of two. Look at the night time winds and temperatures. (If
+nothing dramatic happens,
+decrease the wind speeds again uniformly by a factor of two. Observe
+the fluxes again but pay particular attention to the winds and surface
+temperatures at night.
+Do you conclude that a calm night causes more cooling? How does the
+change in surface air and surface radiant temperatures compare between
+the default and
+light wind cases during the day and at night.
+</p>
+<p>You might see the surface air temperature at 1.5 m decrease when the
+wind speed is decreased. Intuitively, one would expect a surface to
+cool when the
+wind speed is increased and visa versa. Blow on your hand and you will
+see that this is true. So why might the 1.5 m temperature be higher in
+the higher wind
+speed case? Does this apply also to the surface radiant temperature?
+Hint: what has happened to the vertical temperature difference from 1.5
+m to the surface
+when the wind speed is increased or decreased?
+</p>
+</li>
+</ul>
+
+
+<a name="Level2"></a>
+<p><strong>Level 2</strong></p>
+<p><em>Simulation 1:</em></p>
+
+<ul>
+<li>
+<p>Sometimes the temperature in the State College, PA 'Barrens', a
+wilderness region with scrubby vegetation and poor heat conducting
+soils, cools to sub
+freeing temperatures at the surface in August. See if you can simulate,
+using the State College sounding, a freezing night during summertime by
+reducing the wind
+speeds in the initial conditions.
+</p>
+<p>What might you expect under mixed conditions; that of a cloudy night
+with strong winds or a clear night with calm winds? You can make this
+simulation by
+imposing a 'cloud fraction' of say 0.5. If you were a fruit grower,
+what types of weather conditions could conceivably threaten your crop
+by night time freezing
+temperatures?
+</p>
+
+<p>At nightfall, the virtual frictional force discussed above vanishes
+with the disappearance of mixing provided by sensible heat flux. What
+effect might this
+sudden change in the force balance have on the winds. Do you see any
+hint that a profound acceleration is occurring in the wind speeds above
+the lowest 0.5 km?
+(Hint: look at the evolution of the vertical profiles of the wind in
+the animation.)
+</p>
+
+</li>
+</ul>
+
+<p><em>Simulation 2:</em></p>
+
+<ul>
+<li>Make a pair of runs for roughness heights of, say, 0.5 m and 0.1
+m and note the differences in the wind speed at 10 m for both situations
+at the same time of day.
+<p>Suppose that we wanted to know what is the wind speed at face
+level (1.5 m) for these two simulations, but all we had was the
+wind speed at 10 m. Plot the 10 m wind speed on a piece of semi
+log paper in which the x-axis is labeled wind speed and the y-axis
+(the log axis) is labeled height. Label the height axis at 0.1,
+1 and 10 m. Knowing that the wind speed s zero at the roughness
+height, connect the two points by a straight line from 10 m for
+each simulation and determine the wind speed at face level for
+these two roughness cases.
+</p>
+</li>
+</ul>
+
+<a name="terms"></a> <h2>Terms</h2>
+<p><strong>Terms to look up and remember</strong></p>
+
+<p>
+Roughness length<br>
+Displacement height or displacement plane<br>
+Friction velocity<br>
+</p>
+
+<a name="equations"></a>
+<h2>Equations</h2>
+
+<p>[Eqn 2.1]</p>
+<ul style="list-style-type: none;">
+<li><img src="ch02_files/ch02-eq1.gif" alt="Equation 2.1"></li>
+</ul>
+
+<p>[Eqn 2.2]</p>
+<ul style="list-style-type: none;">
+<li><img src="ch02_files/ch02-eq2.gif" alt="Equation 2.2"></li>
+</ul>
+
+<p>[Eqn 2.3]</p>
+<ul style="list-style-type: none;">
+<li><img src="ch02_files/ch02-eq3.gif" alt="Equation 2.3"></li>
+</ul>
+
+
+<div style="text-align: center;">
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/"><strong>SimSphere Home</strong></a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/index.html">Table of Contents</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/preface.html">Preface</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch01.html">1</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch02.html">2</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch03.html">3</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch04.html">4</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch05.html">5</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch06.html">6</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch07.html">7</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch08.html">8</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch09.html">9</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch10.html">10</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch11.html">11</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch12.html">12</a> |
+<a class="noline" href="http://www.e-education.psu.edu/simsphere/workbook/ch13.html">13</a>
+</div>
+
+
+
+
+
+<!-- ################################################################################################# -->
+
+<div id="footer">
+<p><a href="http://www.e-education.psu.edu/">John A. Dutton e-Education Institute</a>,
+A unit of the <a href="http://www.ems.psu.edu/">College of Earth and Mineral Sciences</a></p>
+<p><a href="http://www.psu.edu/">The Pennsylvania State University</a> © 2003</p>
+<p>Updated 5 August 2003</p>
+</div>
+
+
+</div>
+
+>>>>>>> 7bc35cd3af45239f4439bf9bc65080b199daa473
 </body></html>
